@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?famaily=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --bg-color: #1f242d;
+    --text-color: #fff;
+    --second-bg-color: #323946;
+    --main-color: #0ef;
+    --font-color: #000;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+
+body {
+    background: url("../Images/main_background.jpg") no-repeat center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body img {
+    width: 35vw;
+}
+
+section {
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 3%;
+    background: var(--bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.header.sticky {
+    border-bottom: .1rem solid rgba(0, 0, 0, .2);
+}
+
+.logo {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    background-image: linear-gradient(-225deg,
+            rgb(0, 238, 255) 10%,
+            rgb(43, 255, 0) 29%,
+            rgb(255, 255, 0) 67%,
+            rgb(255, 0, 234) 100%);
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #fff;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 2s linear infinite;
+    display: inline-block;
+    font-weight: 600;
+    cursor: default;
+}
+
+@keyframes textclip {
+    to {
+        background-position: 200% center;
+    }
+}
+
+
+.navbar a {
+    font-size: 1.7rem;
+    color: var(--text-color);
+    margin-left: 4rem;
+    transition: .3s;
+}
+
+.navbar a.active1 {
+    color: var(--main-color);
+}
+
+.navbar a:hover,
+.navbar a.active {
+    text-transform: uppercase;
+    background-image: linear-gradient(-225deg,
+            rgb(0, 238, 255) 10%,
+            rgb(43, 255, 0) 29%,
+            rgb(255, 255, 0) 67%,
+            rgb(255, 0, 234) 100%);
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #fff;
+    background-clip: text;
+    /*text-fill-color: transparent;**/
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 2s linear infinite;
+    display: inline-block;
+}
+
+@keyframes textclip {
+    to {
+        background-position: 200% center;
+    }
+}
+
+.main {
+    max-width: 850px;
+    height: 625px;
+    margin: 100px auto;
+    top: 50%;
+    left: 50%;
+    padding: 20px;
+    background: var(--second-bg-color);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px var(--bg-color);
+}
+
+/* Header styles */
+.main h1 {
+    margin-top: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 5rem;
+    color: #00f2ff;
+}
+
+.personal a ,
+.banking a {
+    display: block;
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 10px 15px;
+    background-color: transparent;
+    color: #ffffff;
+    border: .2rem solid #11ff00;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 20px;
+    margin-left: 5px;
+}
+
+.personal a:hover,
+.banking a:hover {
+    background-color: #11ff00;
+    color: #000000;
+    box-shadow: 0 0 2rem #00ff22;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th,
+table td {
+    padding: 12px;
+    text-align: left;
+    border: 3px solid var(--bg-color);
+}
+
+table td {
+    background-color: var(--second-bg-color);
+    font-size: medium;
+}
+
+table th {
+    color: var(--main-color);
+    background-color: var(--second-bg-color);
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+table tr {
+    color: #fff ;
+}
+
+.back {
+    display: block;
+    margin: 10px auto;
+    width: 40%;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 13px;
+    text-align: center;
+    text-decoration: none;
+    background-color: transparent;
+    border: .2rem solid #02eeff;
+    color: #ffffff;
+    font-weight: bold;
+    transition: .5s ease;
+}
+
+.back:hover {
+    background-color: #02eeff;
+    color: #000000;
+    font-weight: bold;
+    box-shadow: 0 0 2rem #02eeff;
+}
+

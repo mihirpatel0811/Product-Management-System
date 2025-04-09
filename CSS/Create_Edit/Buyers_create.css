@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?famaily=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins',sans-serif;
+}
+
+:root {
+    --bg-color : #1f242d;
+    --text-color : #fff;
+    --second-bg-color: #323946;
+    --main-color: #0ef;
+    --font-color: #000;
+    --active-color: #ffe600;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+
+body {
+    background: url("../Images/main_background.jpg") no-repeat center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body img {
+    width: 35vw;
+}
+
+section {
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 3%;
+    background: var(--bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.header.sticky {
+    border-bottom: .1rem solid rgba(0,0,0,.2);
+}
+
+.logo {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    background-image: linear-gradient(-225deg,
+            rgb(0, 238, 255) 10%,
+            rgb(43, 255, 0) 29%,
+            rgb(255, 255, 0) 67%,
+            rgb(255, 0, 234) 100%);
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #fff;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 2s linear infinite;
+    display: inline-block;
+    font-weight: 600;
+    cursor: default;
+}
+
+@keyframes textclip {
+    to {
+        background-position: 200% center;
+    }
+}
+
+.navbar a.active1 {
+    color: var(--active-color);
+}
+
+
+.navbar a {
+    font-size: 1.7rem;
+    color: var(--text-color);
+    margin-left: 4rem;
+    transition: .3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    text-transform: uppercase;
+    background-image: linear-gradient(-225deg,
+            rgb(0, 238, 255) 10%,
+            rgb(43, 255, 0) 29%,
+            rgb(255, 255, 0) 67%,
+            rgb(255, 0, 234) 100%);
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #fff;
+    background-clip: text;
+    /*text-fill-color: transparent;**/
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 2s linear infinite;
+    display: inline-block;
+}
+
+@keyframes textclip {
+    to {
+        background-position: 200% center;
+    }
+}
+
+.main {
+    width: 850px;
+    height: 500px;
+    background: var(--second-bg-color);
+    color: white;
+    top: 55%;
+    left: 50%;
+    bottom: 50%;
+    border-radius: 10px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 50px 30px;
+}
+/* Header styles */
+.main h1 {
+    text-align: center;
+    border-bottom: 3px solid #000000;
+    margin-bottom: 40px;
+    font-size: 5rem;
+    color: #00f2ff;
+}
+
+label {
+    font-size: 1.8rem;
+    color: var(--text-color);
+    margin-bottom: 10px;
+}
+
+.form-group-row {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between the items */
+    margin-bottom: 15px; /* Space below the row */
+}
+
+.form-group {
+    flex: 1; /* Allow the form groups to grow equally */
+    margin-right: 10px; /* Space between the two form groups */
+}
+
+.form-group:last-child {
+    margin-right: 10px; /* Remove margin from the last child */
+}
+
+label {
+    display: block; /* Make labels block elements */
+    margin-bottom: 5px; /* Space between label and input */
+    font-weight: bold; /* Bold labels */
+}
+
+input[type="text"] {
+    width: 100%; /* Full width */
+    padding: 10px; /* Padding inside inputs */
+    border: 1px solid #ccc; /* Border color */
+    border-radius: 4px; /* Rounded corners */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    width: 150px;
+    margin-right: 1px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="number"] {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    color: var(--main-color);
+    font-size: 16px;
+    border-radius: 0px;
+}
+
+button {
+    width: 49%;
+    padding: 10px 15px;
+    font-weight: bold;
+    color: #ffffff;
+    border: .5rem solid #8a2be2;
+    background: transparent;
+    transition: .5s ease;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+button:hover {
+    background: #8a2be2;
+    color: #000000;
+    box-shadow: 0 0 2rem rgb(138, 43, 226);
+}
+
+.main a {
+    width: 49%;
+    padding: 10px 15px;
+    font-weight: bold;
+    color: #ffffff;
+    border: .5rem solid #0ef;
+    background: transparent;
+    transition: .5s ease;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    font-size: 16px;
+}
+
+.main a:hover {
+    background: #0ef;
+    color: #000000;
+    box-shadow: 0 0 2rem #0ef;
+}
+
