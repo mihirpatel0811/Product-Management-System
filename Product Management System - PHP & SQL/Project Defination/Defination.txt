@@ -1,0 +1,321 @@
+--------------------------------------------------Database Side--------------------------------------------------
+
+create a database "product_management"
+
+these database to create five tables 
+	1. products 
+	2. categores
+	3. brands
+	4. bills
+	5. buyers
+	
+1. products table :
+
+> this table to add these types of rows 
+	(id, product_name, category, details, brand, price, stock, entry_date, Orignal_file_name, temp_file_name)
+	
+	Note : Orignal_file_name, temp_file_name these are both work like that user can upload the file or img that time orignal file name is save the 
+		   "Orignal_file_name" column and temp file name is save the "temp_file_name" column
+		   
+		 : these both column logic is one user can upload the "demo.pdf" file in database in that time onther user can upload the same name file upload
+		   in the database but both file content are defferant that time both file are store in database and show the regarding file in the user request
+	
+2. categores table :
+
+> this table to add these types of rows 
+	(id, category_name)
+	
+3. brands table :
+
+> this table to add these types of rows 
+	(id, brand_name)
+	
+4. bills table :
+
+> this table to add these types of rows
+	(id, date, bill_no, buyer_name, buyer_address, buyer_email, buyer_phone_no, product_name, category, details, brand, QTY, price, total)
+	
+5. buyers table : 
+
+> this table to add these types of rows
+	(id, buyer_name, buyer_address, buyer_phone_no)
+	
+6. personal table : 
+
+> this table to add these types of rows
+	(id, name, address, email, phone_no)
+	
+7. banking table :
+
+> this table to add these types of rows
+	(id, bank_name, A/C_no, IFSC_code)
+
+Notes :
+
+> the products table inside category row is joint in the categores table and brand row is the joint in the brands table
+
+> the bills table inside buyer_name is joint in the buyers table inside buyer_name and product_name row is joint in the products table
+  inside product_name
+
+--------------------------------------------------User Interface Design--------------------------------------------------
+Main Page
+
+The Main page consists of three main parts:
+
+    Header:
+        Navigation Bar Options: Home, Product, Category, Brand, Buyer, Billing, Contact.
+
+    Main Content:
+        Welcome Message: "Welcome to the Product Management System."
+        Options: Registration, Login.
+
+    Footer:
+        Social Media Options: WhatsApp, Instagram, Facebook, Gmail.
+
+User Authentication
+
+    Login:
+        Users can log in to access the system.
+
+    Registration:
+        Users can create an account by filling out a registration form (username, email, password).
+
+    Post-Login:
+        Users are redirected to the Product Dashboard upon successful login.
+		
+--------------------------------------------------User Password Change Functionality--------------------------------------------------
+
+This PHP script allows users to change their passwords in two scenarios: before logging in and after logging in.
+
+    Changing Password Before Login:
+        Users can enter their username along with a new password and confirm the new password.
+        The script will update the password in the database for the specified username.
+        After successfully changing the password, users will be redirected to the login page.
+
+    Changing Password After Login:
+        Once logged in, users can change their password by entering a new password and confirming it.
+        The script will update the password in the database for the currently logged-in user.
+        After successfully changing the password, users will be redirected to their profile page.
+
+----------------------------------------------------Home Management---------------------------------------------------
+
+ >   Display total products in the products table.
+ >   Show total stock available for all products.
+ >   Users can click on stock to view a list of individual product stocks.
+ >   Display a chart showing the highest and lowest purchases.
+
+--------------------------------------------------Product Management--------------------------------------------------
+Product Dashboard
+
+    Header:
+        Navigation Bar Options: Product, Category, Brand, Buyer, Billing, Username, Logout.
+
+    Main Content:
+        Display product information with options to search, refresh, and add products.
+
+Product Management
+
+    Product Information Table:
+        Columns: Product Name, Category, Details, Brand, Stock, Price, Entry Date, Action.
+        Action Column Options:
+            Show: View detailed information about the product.
+            Edit: Open an edit page with pre-filled product information for modification.
+            Delete: Remove product information from the database.
+
+    Add Product Page:
+        Fields: Product Name, Category (dropdown), Details, Brand (dropdown), Stock, Price, Date.
+        Button: Save (saves information to the products table).
+
+    Edit Product Page:
+        Pre-filled fields with existing product information.
+        Button: Save (updates information in both the database and the dashboard).
+
+    Show Product Page:
+        Displays product information.
+        Button: Print (prints only product information).
+
+    Delete Functionality:
+        Removes product information from both the database and the dashboard.
+
+--------------------------------------------------Category Management--------------------------------------------------
+Category Dashboard
+
+    Header:
+        Navigation Bar Options: Product, Category, Brand, Buyer, Billing, Username, Logout.
+
+    Main Content:
+        Display category information with options to search, refresh, and add categories.
+
+Category Management
+
+    Category Information Table:
+        Columns: Category, Action.
+        Action Column Options:
+            Show: View detailed information about the category.
+            Edit: Open an edit page with pre-filled category information for modification.
+            Delete: Remove category information from the database.
+
+    Add Category Page:
+        Fields: Category Name.
+        Button: Save (saves information to the categores table).
+
+    Edit Category Page:
+        Pre-filled fields with existing category information.
+        Button: Save (updates information in both the database and the dashboard).
+
+    Show Category Page:
+        Displays category information.
+        Button: Print (prints only category information).
+
+    Delete Functionality:
+        Removes category information from both the database and the dashboard.
+
+--------------------------------------------------Brand Management--------------------------------------------------
+Brand Dashboard
+
+    Header:
+        Navigation Bar Options: Product, Category, Brand, Buyer, Billing, Username, Logout.
+
+    Main Content:
+        Display brand information with options to search, refresh, and add brands.
+
+Brand Management
+
+    Brand Information Table:
+        Columns: Brand, Action.
+        Action Column Options:
+            Show: View detailed information about the brand.
+            Edit: Open an edit page with pre-filled brand information for modification.
+            Delete: Remove brand information from the database.
+
+    Add Brand Page:
+        Fields: Brand Name.
+        Button: Save (saves information to the brands table).
+
+    Edit Brand Page:
+        Pre-filled fields with existing brand information.
+        Button: Save (updates information in both the database and the dashboard).
+
+    Show Brand Page:
+        Displays brand information.
+        Button: Print (prints only brand information).
+
+    Delete Functionality:
+        Removes brand information from both the database and the dashboard.
+
+--------------------------------------------------Buyer Management--------------------------------------------------
+Buyer Dashboard
+
+    Header:
+        Navigation Bar Options: Product, Category, Brand, Buyer, Billing, Username, Logout.
+
+    Main Content:
+        Display buyer information with options to search, refresh, and add buyers.
+
+Buyer Management
+
+    Buyer Information Table:
+        Columns: Buyer Name, Address, Phone No., Action.
+        Action Column Options:
+            Show: View detailed information about the buyer.
+            Edit: Open an edit page with pre-filled buyer information for modification.
+            Delete: Remove buyer information from the database.
+
+    Add Buyer Page:
+        Fields: Buyer Name, Address, Phone No.
+        Button: Save (saves information to the buyers table).
+
+    Edit Buyer Page:
+        Pre-filled fields with existing buyer information.
+        Button: Save (updates information in both the database and the dashboard).
+
+    Show Buyer Page:
+        Displays buyer information.
+        Button: Print (prints only buyer information).
+
+    Delete Functionality:
+        Removes buyer information from both the database and the dashboard.
+
+--------------------------------------------------Billing Management--------------------------------------------------
+Billing Dashboard
+
+    Header:
+        Navigation Bar Options: Product, Category, Brand, Buyer, Billing, Username, Logout.
+
+    Main Content:
+        Display billing information with options to search, refresh, and add bills.
+
+Billing Management
+
+    Billing Information Table:
+        Columns: Date, Bill No, Buyer Name, Address, Email, Phone No., Product Name, Category, Details, Brand, QTY, Price, Total, Action.
+        Action Column Options:
+            Show: View detailed information about the billing.
+            Print: Print only billing information.
+
+    Add Bill Page:
+        Fields: Date, Bill No, Buyer Name (dropdown), Address, Email, Phone No., Product Name (dropdown), Category, Details, Brand, QTY, Price, Total.
+        Button: Save (saves information to the bills table).
+
+    Notes:
+        Bill No. starts at 1125 and increments automatically.
+        Buyer Name selection auto-fills corresponding address, email, and phone number.
+        Product Name selection auto-fills corresponding category, brand, details, and price.
+        Users manually enter QTY and GST.
+        Total is calculated as (QTY * Price).
+
+    Show Bill Page:
+        Displays billing information.
+        Button: Print (prints only billing information).
+
+    Print Functionality:
+        Prints only billing information.
+
+Notes: After saving a bill, the stock in the products table is automatically decreased, and the product dashboard is updated to reflect the new stock levels.
+--------------------------------------------------Personal and Banking Information Dashboard--------------------------------------------------
+
+This dashboard allows users to manage their personal and banking information.
+
+    Users can create personal and banking details, but each can only be created once. After creation, users can only update their information.
+
+--------------------------------------------------User Profile--------------------------------------------------
+
+    Username Option: Opens a profile page displaying the username and email ID and password. 
+			and user can change the password and upload the your DP Image for user choice.
+
+--------------------------------------------------Logout--------------------------------------------------
+
+    Logout Option: Logs the user out and redirects to the home page.
+
+--------------------------------------------------Implementation Considerations--------------------------------------------------
+Frontend Technologies
+
+    HTML/CSS: For structure and styling of the web pages.
+    JavaScript: For client-side interactivity (e.g., form validation, dynamic content updates).
+    Frameworks: Consider using frameworks like Bootstrap for responsive design or React/Vue.js for a more dynamic user experience.
+
+Backend Technologies
+
+    PHP: For server-side scripting to handle requests, process data, and interact with the database.
+    SQL: For database operations (CRUD - Create, Read, Update, Delete).
+
+Database Management
+
+    Use MySQL or any other relational database management system to create and manage the database and tables.
+    Ensure proper indexing for efficient querying, especially for the search functionality.
+
+Security
+
+    Implement user authentication and authorization.
+    Use password hashing (e.g., bcrypt) for storing passwords securely.
+    Validate and sanitize user input to prevent SQL injection and XSS attacks.
+
+User Experience
+
+    Ensure the interface is user-friendly and intuitive.
+    Provide feedback messages for actions (e.g., successful registration, errors).
+    Consider implementing pagination for the product, category, and brand lists if they grow large.
+
+This structured approach outlines the development of a comprehensive Product Management System that meets the specified requirements 
+while ensuring a smooth user experience and robust backend functionality.
+------------------------------------------------------------------------------------------------------------------------------------------------------
